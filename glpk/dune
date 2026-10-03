@@ -1,0 +1,13 @@
+(library
+ (name glpk)
+ (public_name lp.glpk)
+ (modules glpk stubs)
+ (private_modules stubs)
+ (libraries lp.common)
+ (enabled_if (= %{read:../config/results/glpk_available} true))
+ (foreign_stubs
+  (language c)
+  (names glpk_stubs)
+  (include_dirs ../config/results ../common)
+  (flags (:standard (:include ../config/results/glpk_c_flags.sexp))))
+ (c_library_flags (:include ../config/results/glpk_c_library_flags.sexp)))
