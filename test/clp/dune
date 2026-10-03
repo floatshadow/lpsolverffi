@@ -1,0 +1,5 @@
+(test
+ (name run)
+ (modules run)
+ (libraries solver_test lp.clp)
+ (enabled_if (= %{read:../../config/results/clp_available} true)))

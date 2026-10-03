@@ -1,0 +1,4 @@
+(library
+ (name solver_test)
+ (modules solver_test)
+ (libraries lp.common))

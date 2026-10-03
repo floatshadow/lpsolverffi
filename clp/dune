@@ -1,0 +1,13 @@
+(library
+ (name clp)
+ (public_name lp.clp)
+ (modules clp stubs)
+ (private_modules stubs)
+ (libraries lp.common)
+ (enabled_if (= %{read:../config/results/clp_available} true))
+ (foreign_stubs
+  (language c)
+  (names clp_stubs)
+  (include_dirs ../config/results ../common)
+  (flags (:standard (:include ../config/results/clp_c_flags.sexp))))
+ (c_library_flags (:include ../config/results/clp_c_library_flags.sexp)))
