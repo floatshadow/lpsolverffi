@@ -1,0 +1,8 @@
+(rule
+ (targets
+  clp_available clp_header.h clp_c_flags.sexp clp_c_library_flags.sexp
+  highs_available highs_header.h highs_c_flags.sexp highs_c_library_flags.sexp
+  glpk_available glpk_header.h glpk_c_flags.sexp glpk_c_library_flags.sexp)
+ ; System headers/libraries can change without a source file changing.
+ (deps (universe))
+ (action (run ../discover.exe)))
