@@ -1,0 +1,13 @@
+(library
+ (name highs)
+ (public_name lp.highs)
+ (modules highs stubs)
+ (private_modules stubs)
+ (libraries lp.common)
+ (enabled_if (= %{read:../config/results/highs_available} true))
+ (foreign_stubs
+  (language c)
+  (names highs_stubs)
+  (include_dirs ../config/results ../common)
+  (flags (:standard (:include ../config/results/highs_c_flags.sexp))))
+ (c_library_flags (:include ../config/results/highs_c_library_flags.sexp)))

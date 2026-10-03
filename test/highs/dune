@@ -1,0 +1,5 @@
+(test
+ (name run)
+ (modules run)
+ (libraries solver_test lp.highs)
+ (enabled_if (= %{read:../../config/results/highs_available} true)))
