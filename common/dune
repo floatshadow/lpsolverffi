@@ -1,0 +1,4 @@
+(library
+ (name lp_common)
+ (public_name lp.common)
+ (modules lp_common))
